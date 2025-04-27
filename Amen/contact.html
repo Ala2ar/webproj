@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Amen Medical Center</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #337AFF;
+      --primary-dark: #2a65d1;
+      --light-color: #F5F9FF;
+      --text-color: #333333;
+      --text-light: #555555;
+      --card-bg: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background-color: var(--light-color);
+      line-height: 1.6;
+      padding-top: 80px; /* For fixed navbar */
+    }
+
+    /* Navigation */
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-color) !important;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: var(--text-color) !important;
+      font-weight: 500;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .nav-link.active {
+      color: var(--primary-color) !important;
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    #contact-hero {
+      background: linear-gradient(rgba(51, 122, 255, 0.9), rgba(51, 122, 255, 0.9)), url('images/contact-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 6rem 0;
+      text-align: center;
+    }
+
+    /* Contact Cards */
+    #contact-cards {
+      padding: 4rem 0;
+      background-color: white;
+    }
+
+    .contact-card {
+      background-color: var(--light-color);
+      border-radius: 1rem;
+      padding: 2.5rem 2rem;
+      height: 100%;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .contact-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Contact Form */
+    #contact-form-section {
+      padding: 4rem 0;
+      background-color: var(--light-color);
+    }
+
+    .form-control {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.25rem rgba(51, 122, 255, 0.25);
+    }
+
+    /* Location Map */
+    #location-map {
+      padding: 4rem 0;
+      background-color: white;
+    }
+
+    .map-container {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      height: 100%;
+    }
+
+    /* Emergency Notice */
+    .emergency-notice {
+      background-color: #FFF3F3;
+      border-left: 4px solid #FF6B6B;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Animation classes */
+    .animate-on-scroll {
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .animate-on-scroll.animated {
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #contact-hero {
+        padding: 4rem 0;
+      }
+      
+      #contact-cards, #contact-form-section, #location-map {
+        padding: 2rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Amen Medical Center</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="ourservices.html">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="contact-hero">
+    <div class="container">
+      <h1 class="animate-on-scroll" data-animation="fadeInDown">Contact Amen Medical Center</h1>
+      <p class="lead animate-on-scroll" data-animation="fadeIn" data-delay="100">We're here to provide the care and support you need</p>
+    </div>
+  </section>
+
+  <!-- Contact Cards -->
+  <section id="contact-cards">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
+            <h3>By Phone</h3>
+            <p>Speak directly with our team during business hours</p>
+            <div class="mt-4">
+              <h4 class="text-primary">(+251) 9123-4567</h4>
+              <p class="text-muted">Monday-Friday: 8am-6pm<br>Saturday: 9am-1pm</p>
+              <a href="tel:5551234567" class="btn btn-primary mt-3">Call Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+            <h3>By Email</h3>
+            <p>Send us a message and we'll respond within 24 hours</p>
+            <div class="mt-4">
+              <h4 class="text-primary">info@amenmedicalcenter.com</h4>
+              <p class="text-muted">For non-urgent inquiries only</p>
+              <a href="mailto:info@amenmedicalcenter.com" class="btn btn-primary mt-3">Email Us</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-calendar-check-fill"></i></div>
+            <h3>Online Scheduling</h3>
+            <p>Book appointments 24/7 through our secure patient portal</p>
+            <div class="mt-4">
+              <a href="#" class="btn btn-primary">Patient Portal</a>
+              <p class="text-muted small mt-3">New patients please call first</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact-form-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 animate-on-scroll" data-animation="fadeInLeft">
+          <h2 class="mb-4">Send Us a Message</h2>
+          <p class="mb-4">Have questions or need more information? Our team is ready to assist you with all your healthcare needs.</p>
+          
+          <div class="emergency-notice animate-on-scroll" data-animation="fadeInLeft" data-delay="100">
+            <div class="d-flex">
+              <i class="bi bi-exclamation-triangle-fill text-danger me-3" style="font-size: 1.5rem;"></i>
+              <div>
+                <h5 class="mb-2">For medical emergencies</h5>
+                <p class="mb-0">Please call 911 or go to your nearest emergency room immediately.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 animate-on-scroll" data-animation="fadeInRight" data-delay="100">
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="First Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Last Name" required>
+              </div>
+            </div>
+            <input type="email" class="form-control" placeholder="Email Address" required>
+            <input type="tel" class="form-control" placeholder="Phone Number">
+            <select class="form-control" required>
+              <option value="" disabled selected>Select Department</option>
+              <option>General Inquiry</option>
+              <option>Appointments</option>
+              <option>Billing Questions</option>
+              <option>Medical Records</option>
+              <option>Other</option>
+            </select>
+            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Map -->
+  <section id="location-map">
+    <div class="container">
+      <h2 class="text-center mb-5 animate-on-scroll" data-animation="fadeIn">Visit Our Office</h2>
+      <div class="row gy-4">
+        <div class="col-lg-6 animate-on-scroll" data-animation="fadeInLeft">
+          <div class="map-container">
+            <!-- Embedded Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256627566!2d-73.98784492423903!3d40.74844097138978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMDkuOSJX!5e0!3m2!1sen!2sus!4v1623259873825!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6 animate-on-scroll" data-animation="fadeInRight" data-delay="100">
+          <div class="ps-lg-5">
+            <h3 class="mb-4">Amen Medical Center Center</h3>
+            <address class="mb-4">
+              <p><i class="bi bi-geo-alt-fill text-primary me-2"></i> 123 Health Drive<br>Bahir Dar, Kebele 14 near Yetebaberut</p>
+              <p><i class="bi bi-telephone-fill text-primary me-2"></i> (+251) 9123-4567</p>
+              <p><i class="bi bi-envelope-fill text-primary me-2"></i> info@amenmedicalcenter.com</p>
+            </address>
+            
+            <h4 class="mt-5 mb-3">Office Hours</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2"><strong>Monday-Friday:</strong> 8:00 AM - 6:00 PM</li>
+              <li class="mb-2"><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
+              <li class="mb-2"><strong>Sunday:</strong> Closed</li>
+            </ul>
+            
+            <h4 class="mt-5 mb-3">Parking Information</h4>
+            <p>Free patient parking available in our adjacent parking garage. Please bring your parking ticket for validation at our front desk.</p>
+            
+            <h4 class="mt-5 mb-3">Public Transportation</h4>
+            <p>We're conveniently located near the Springfield Metro Station (Blue Line) with a covered walkway to our building.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Intersection Observer for scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            const animation = element.getAttribute('data-animation');
+            const delay = element.getAttribute('data-delay') || 0;
+            
+            setTimeout(() => {
+              element.classList.add('animate__animated', `animate__${animation}`);
+              element.classList.add('animated');
+            }, delay);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Observe all elements with animate-on-scroll class
+      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 70, // Offset for fixed navbar
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
