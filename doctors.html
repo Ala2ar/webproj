@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Providers | Amen Medical Center</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #337AFF;
+      --primary-dark: #2a65d1;
+      --light-color: #F5F9FF;
+      --text-color: #333333;
+      --text-light: #555555;
+      --card-bg: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background-color: var(--light-color);
+      line-height: 1.6;
+      padding-top: 80px; /* For fixed navbar */
+    }
+
+    /* Navigation - same as main page */
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-color) !important;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: var(--text-color) !important;
+      font-weight: 500;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .nav-link.active {
+      color: var(--primary-color) !important;
+      font-weight: 600;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    /* Providers Header */
+    #providers-header {
+      background: linear-gradient(rgba(51, 122, 255, 0.9), rgba(51, 122, 255, 0.9)), url('images/doctors-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    /* Provider Filter */
+    #provider-filter {
+      padding: 2rem 0;
+      background-color: white;
+    }
+
+    .filter-btn {
+      margin: 0.25rem;
+      transition: all 0.3s ease;
+    }
+
+    /* Providers Grid */
+    #providers-grid {
+      padding: 4rem 0;
+      background-color: var(--light-color);
+    }
+
+    .provider-card {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: 100%;
+      text-align: center;
+    }
+
+    .provider-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .provider-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 0 auto 1.5rem;
+    }
+
+    .specialty-badge {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .provider-social {
+      margin-top: 1.5rem;
+    }
+
+    .provider-social a {
+      color: var(--text-light);
+      margin: 0 0.5rem;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .provider-social a:hover {
+      color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Animation classes for scroll */
+    .animate-on-scroll {
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .animate-on-scroll.animated {
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #providers-header {
+        padding: 3rem 0;
+      }
+      
+      #providers-grid {
+        padding: 2rem 0;
+      }
+
+      .provider-img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Amen Medical Center</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="ourservices.html">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Providers Header -->
+  <section id="providers-header">
+    <div class="container">
+      <h1 class="animate-on-scroll" data-animation="fadeInDown">Meet Our Providers</h1>
+      <p class="lead animate-on-scroll" data-animation="fadeIn" data-delay="100">Board-certified specialists dedicated to your health and wellbeing</p>
+    </div>
+  </section>
+
+  <!-- Provider Filter -->
+  <section id="provider-filter">
+    <div class="container animate-on-scroll" data-animation="fadeIn">
+      <div class="text-center">
+        <div class="btn-group flex-wrap" role="group">
+          <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">All Specialties</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="obgyn">OB/GYN</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="mfm">Maternal-Fetal Medicine</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="gyn-onc">Gynecologic Oncology</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="urogyn">Urogynecology</button>
+          <button type="button" class="btn btn-outline-primary filter-btn" data-filter="reproductive">Reproductive Endocrinology</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Providers Grid -->
+  <section id="providers-grid">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- OB/GYN -->
+        <div class="col-md-4 col-lg-3 provider-item" data-category="obgyn">
+          <div class="provider-card animate-on-scroll" data-animation="fadeInUp">
+            <img src="images/dr2.jpg" class="provider-img" alt="Dr. Emily Turner">
+            <span class="specialty-badge">OB/GYN</span>
+            <h4>Dr. Emily Turner, M.D.</h4>
+            <p class="text-muted">Women's Health Specialist</p>
+            <p>Specializing in preventive care and comprehensive treatment for all aspects of women's health.</p>
+            <div class="provider-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mt-2">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Maternal-Fetal Medicine -->
+        <div class="col-md-4 col-lg-3 provider-item" data-category="mfm">
+          <div class="provider-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+            <img src="images/dr.jpg" class="provider-img" alt="Dr. Barnes Reynolds">
+            <span class="specialty-badge">Maternal-Fetal Medicine</span>
+            <h4>Dr. Barnes Reynolds, M.D.</h4>
+            <p class="text-muted">Medical Director</p>
+            <p>Expert in high-risk pregnancies and complex obstetric cases with 25+ years experience.</p>
+            <div class="provider-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mt-2">View Profile</a>
+          </div>
+        </div>
+
+        <!-- OB/GYN -->
+        <div class="col-md-4 col-lg-3 provider-item" data-category="obgyn">
+          <div class="provider-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+            <img src="images/dr1.jpg" class="provider-img" alt="Dr. Arjun Patel">
+            <span class="specialty-badge">OB/GYN</span>
+            <h4>Dr. Arjun Patel, M.D.</h4>
+            <p class="text-muted">Minimally Invasive Surgeon</p>
+            <p>Specializing in advanced laparoscopic and robotic procedures for faster recovery times.</p>
+            <div class="provider-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mt-2">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Gynecologic Oncology -->
+        <div class="col-md-4 col-lg-3 provider-item" data-category="gyn-onc">
+          <div class="provider-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+            <img src="images/dr3.jpg" class="provider-img" alt="Dr. Samantha Chen">
+            <span class="specialty-badge">Gynecologic Oncology</span>
+            <h4>Dr. Samantha Chen, M.D.</h4>
+            <p class="text-muted">Oncology Specialist</p>
+            <p>Fellowship-trained in the diagnosis and treatment of gynecologic cancers.</p>
+            <div class="provider-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mt-2">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Urogynecology -->
+        <div class="col-md-4 col-lg-3 provider-item" data-category="urogyn">
+          <div class="provider-card animate-on-scroll" data-animation="fadeInUp">
+            <img src="images/dr4.jpg" class="provider-img" alt="Dr. Michael Rodriguez">
+            <span class="specialty-badge">Urogynecology</span>
+            <h4>Dr. Michael Rodriguez, M.D.</h4>
+            <p class="text-muted">Pelvic Medicine Specialist</p>
+            <p>Specializing in pelvic floor disorders and reconstructive surgery.</p>
+            <div class="provider-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mt-2">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Reproductive Endocrinology -->
+        <div class="col-md-4 col-lg-3 provider-item" data-category="reproductive">
+          <div class="provider-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+            <img src="images/dr5.jpg" class="provider-img" alt="Dr. Olivia Bennett">
+            <span class="specialty-badge">Reproductive Endocrinology</span>
+            <h4>Dr. Olivia Bennett, M.D.</h4>
+            <p class="text-muted">Fertility Specialist</p>
+            <p>Expert in infertility evaluation and treatment, including IVF and fertility preservation.</p>
+            <div class="provider-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mt-2">View Profile</a>
+          </div>
+        </div>
+
+        <!-- OB/GYN -->
+        <div class="col-md-4 col-lg-3 provider-item" data-category="obgyn">
+          <div class="provider-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+            <img src="images/dr6.jpg" class="provider-img" alt="Dr. Jessica Kim">
+            <span class="specialty-badge">OB/GYN</span>
+            <h4>Dr. Jessica Kim, M.D.</h4>
+            <p class="text-muted">General Obstetrics & Gynecology</p>
+            <p>Comprehensive care for women through all life stages with a focus on adolescent health.</p>
+            <div class="provider-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mt-2">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Maternal-Fetal Medicine -->
+        <div class="col-md-4 col-lg-3 provider-item" data-category="mfm">
+          <div class="provider-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+            <img src="images/dr7.jpg" class="provider-img" alt="Dr. Robert Henderson">
+            <span class="specialty-badge">Maternal-Fetal Medicine</span>
+            <h4>Dr. Robert Henderson, M.D.</h4>
+            <p class="text-muted">High-Risk Pregnancy Specialist</p>
+            <p>Specializing in complex maternal and fetal conditions with advanced ultrasound expertise.</p>
+            <div class="provider-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mt-2">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="cta" style="background-color: var(--primary-color); padding: 4rem 0; color: white;">
+    <div class="container text-center animate-on-scroll" data-animation="fadeIn">
+      <h2 class="mb-4">Ready to Schedule With a Provider?</h2>
+      <p class="mb-4">Our team is standing by to help you with all your women's health needs.</p>
+      <a href="index.html#contact" class="btn btn-light btn-lg px-4">Contact Us Today</a>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Intersection Observer for scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            const animation = element.getAttribute('data-animation');
+            const delay = element.getAttribute('data-delay') || 0;
+            
+            setTimeout(() => {
+              element.classList.add('animate__animated', `animate__${animation}`);
+              element.classList.add('animated');
+            }, delay);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Observe all elements with animate-on-scroll class
+      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 70, // Offset for fixed navbar
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Provider Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const providerItems = document.querySelectorAll('.provider-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          // Filter providers
+          const filterValue = button.getAttribute('data-filter');
+          
+          providerItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

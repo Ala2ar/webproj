@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | Amen Medical Center</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #337AFF;
+      --primary-dark: #2a65d1;
+      --light-color: #F5F9FF;
+      --text-color: #333333;
+      --text-light: #555555;
+      --card-bg: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background-color: var(--light-color);
+      line-height: 1.6;
+      padding-top: 80px; /* For fixed navbar */
+    }
+
+    /* Navigation - same as main page */
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-color) !important;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: var(--text-color) !important;
+      font-weight: 500;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    /* Services Header */
+    #services-header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      padding: 4rem 0;
+      background-color: white;
+    }
+
+    .service-category {
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background-color: var(--light-color);
+      border-radius: 1rem;
+      padding: 2rem;
+      height: 100%;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Testimonials */
+    #testimonials {
+      background-color: var(--light-color);
+      padding: 4rem 0;
+    }
+
+    .testimonial-card {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    /* Animation classes for scroll */
+    .animate-on-scroll {
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .animate-on-scroll.animated {
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #services-header {
+        padding: 3rem 0;
+      }
+      
+      .services-grid, #testimonials {
+        padding: 2rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Amen Medical Center</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="ourservices.html">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Services Header -->
+  <section id="services-header">
+    <div class="container">
+      <h1 class="animate-on-scroll" data-animation="fadeInDown">Comprehensive Women's Healthcare</h1>
+      <p class="lead animate-on-scroll" data-animation="fadeIn" data-delay="100">Specialized services designed to support women through every stage of life</p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services-grid">
+    <div class="container">
+      <!-- Obstetrics Services -->
+      <div class="service-category animate-on-scroll" data-animation="fadeInUp">
+        <h2 class="text-center mb-5">Obstetrics Services</h2>
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
+              <h4>Prenatal Care</h4>
+              <p>Comprehensive care throughout your pregnancy with advanced monitoring and personalized support from our specialists.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-heart-fill"></i></div>
+              <h4>High-Risk Pregnancy</h4>
+              <p>Specialized care for high-risk pregnancies with state-of-the-art diagnostic tools and experienced maternal-fetal medicine specialists.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-baby"></i></div>
+              <h4>Labor & Delivery</h4>
+              <p>Comfortable, family-centered birthing experience with 24/7 obstetric coverage and neonatal specialists on call.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gynecological Services -->
+      <div class="service-category animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+        <h2 class="text-center mb-5">Gynecological Services</h2>
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-gender-female"></i></div>
+              <h4>Annual Exams</h4>
+              <p>Comprehensive well-woman exams including Pap smears, breast exams, and personalized health counseling.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+              <h4>Contraception</h4>
+              <p>Personalized family planning options including IUDs, implants, and hormonal therapies tailored to your needs.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-thermometer-high"></i></div>
+              <h4>Menopause Care</h4>
+              <p>Specialized treatment for menopausal symptoms including hormone therapy alternatives and lifestyle counseling.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Surgical Services -->
+      <div class="service-category animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+        <h2 class="text-center mb-5">Surgical Services</h2>
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-suit-heart"></i></div>
+              <h4>Minimally Invasive</h4>
+              <p>Laparoscopic and robotic-assisted procedures for faster recovery and minimal scarring.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-hospital"></i></div>
+              <h4>Hysterectomy</h4>
+              <p>Advanced surgical options including vaginal, laparoscopic, and robotic-assisted hysterectomy procedures.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="bi bi-activity"></i></div>
+              <h4>Pelvic Reconstruction</h4>
+              <p>Surgical correction for pelvic organ prolapse and urinary incontinence with lasting results.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="text-center mb-5 animate-on-scroll" data-animation="fadeIn">What Our Patients Say</h2>
+      <div class="row gy-4">
+        <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp">
+          <div class="testimonial-card">
+            <div class="service-icon"><i class="bi bi-chat-quote"></i></div>
+            <p>"The care I received during my pregnancy was exceptional. Dr. Reynolds made me feel comfortable and informed at every step."</p>
+            <h5>Sarah M.</h5>
+            <p class="text-muted">Obstetrics Patient</p>
+          </div>
+        </div>
+        <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+          <div class="testimonial-card">
+            <div class="service-icon"><i class="bi bi-chat-quote"></i></div>
+            <p>"The minimally invasive surgery was life-changing. I was back to my normal routine in half the expected recovery time."</p>
+            <h5>Jennifer T.</h5>
+            <p class="text-muted">Surgical Patient</p>
+          </div>
+        </div>
+        <div class="col-md-4 animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+          <div class="testimonial-card">
+            <div class="service-icon"><i class="bi bi-chat-quote"></i></div>
+            <p>"The entire staff makes you feel like family. I've been coming here for 15 years and wouldn't trust my care to anyone else."</p>
+            <h5>Maria G.</h5>
+            <p class="text-muted">Gynecology Patient</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="cta" style="background-color: var(--primary-color); padding: 4rem 0; color: white;">
+    <div class="container text-center animate-on-scroll" data-animation="fadeIn">
+      <h2 class="mb-4">Ready to Schedule Your Appointment?</h2>
+      <p class="mb-4">Our team is standing by to help you with all your women's health needs.</p>
+      <a href="index.html#contact" class="btn btn-light btn-lg px-4">Contact Us Today</a>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Intersection Observer for scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            const animation = element.getAttribute('data-animation');
+            const delay = element.getAttribute('data-delay') || 0;
+            
+            setTimeout(() => {
+              element.classList.add('animate__animated', `animate__${animation}`);
+              element.classList.add('animated');
+            }, delay);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Observe all elements with animate-on-scroll class
+      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 70, // Offset for fixed navbar
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
